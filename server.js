@@ -9,6 +9,10 @@ app.use('/graphql', graphqlHTTP({
   graphiql: true
 }));
 
+app.get('/', function(req, res) {
+  res.send('Go to /graphql to start');
+})
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`App running on ${PORT}`));
